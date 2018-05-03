@@ -5,67 +5,26 @@ import java.time.LocalDate;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import lombok.Data;
+import lombok.NonNull;
+
 /**
  * Class representing an event that occurred on a specific date.
  */
+@Data
 public class Event {
 
 	/**
 	 * Date of the event.
 	 */
+	@NonNull
 	private LocalDate date;
 
 	/**
 	 * Description of the event.
 	 */
+	@NonNull
 	private String description;
-
-	/**
-	 * Constructor for creating an {@code Event} object.
-	 *
-	 * @param date the date of the event
-	 * @param description the description of the event
-	 */
-	public Event(LocalDate date, String description) {
-		this.date = date;
-		this.description = description;
-	}
-
-	/**
-	 * Returns the date of this event.
-	 *
-	 * @return the date of this event
-	 */
-	public LocalDate getDate() {
-		return date;
-	}
-
-	/**
-	 * Sets the date of this event.
-	 *
-	 * @param date the date of this event
-	 */
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
-
-	/**
-	 * Returns the description of this event.
-	 *
-	 * @return the description of this event
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * Sets the description of this event.
-	 *
-	 * @param description the description of this event
-	 */
-	public void setDescription(String description) {
-		this.description = description;
-	}
 
 	// CHECKSTYLE:OFF
 	public boolean equals(Object o) {
